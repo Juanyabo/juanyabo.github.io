@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--NAVBAR-->
+    <nav>
+        <div class="left">
+            <a href="/">Juan Gianella</a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/Juanyabo" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/juan-gianella/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>Linkedin</span>
+            </a>
+            <a href="mailto: juan.gianella13@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </nav>
+    <main>
+        <!-- SECTION 1: Hero -->
+        <section class="hero-section">
+            <div class="text">
+                <h2>Hello, I'm Juan Gianella</h2>
+                <p>Systems Engineer specialized in Game Programming and UI Development. Graduated in 2024 as a Systems Engineer, I began my journey in software development with a Front-End internship in 2023, using Flutter and Dart to build a web app. In October 2024, I joined U-Tad University to specialize in Game Programming. Since then, I have worked for 8 months at Zulo Interactive, a student-led studio, contributing to Gameplay and UI systems for Lady Umbrella, a title set to release on Steam in October 2025. My focus is on creating intuitive and visually cohesive gameplay experiences through solid technical and UI design foundations.</p>
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+            <div class="headshot">
+                <img src="images/hero-headshot.webp" alt="Juan Gianella headshot">
+            </div>
+        </section>
+        <!-- SECTION 2: Skills -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">
+                I am a versatile developer with experience in both game development and full-stack web and mobile applications. I have worked with game engines, and my expertise extends to mobile and web frameworks as well as database technologies. I am also familiar with cloud platforms, enabling me to deliver polished, maintainable, and scalable software solutions.
+            </div>
+            <div class="cells">
+                <div class="cell">
+                    <img src="images/unreal-engine-logo.webp" alt="unreal-engine-logo">
+                    <span>Unreal Engine</span>
+                </div>
+                <div class="cell">
+                    <img src="images/unity-logo.webp" alt="unity-logo">
+                    <span>Unity</span>
+                </div>
+                <div class="cell">
+                    <img src="images/html-logo.webp" alt="html-logo">
+                    <span>HTML</span>
+                </div>
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="css-logo">
+                    <span>CSS</span>
+                </div>
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="javascript-logo">
+                    <span>JavaScript</span>
+                </div>
+                <div class="cell">
+                    <img src="images/node-logo.webp" alt="node-logo">
+                    <span>Node.js</span>
+                </div>
+                <div class="cell">
+                    <img src="images/react-logo.webp" alt="react-logo">
+                    <span>React.js</span>
+                </div>
+            </div>
+        </section>
+        <!-- SECTION 3: Contact -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="text">
+                    I’m open to new opportunities and collaborations in software or game development. Let’s connect.
+                </div>
+                <form action="https://formspree.io/f/mdkwpqbj" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="_replyto" id="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
