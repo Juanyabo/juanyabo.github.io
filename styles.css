@@ -367,3 +367,45 @@ nav .right a span {
         padding: 0 20px;
     }
 }
+
+@media (max-width: 480px) {
+    /* NAVBAR */
+    nav .left a {
+        font-size: 12px; 
+    }
+
+    nav .center {
+        gap: 10px;
+    }
+
+    nav .center a {
+        font-size: 10px;
+    }
+
+    nav .right a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 391px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 5px; 
+    }
+
+    nav .left a {
+        font-size: 10px;
+    }
+
+    nav .center {
+        gap: 5px;
+    }
+
+    nav .center a {
+        font-size: 8px;
+    }
+
+    nav .right a {
+        font-size: 10px;
+    }
+}
