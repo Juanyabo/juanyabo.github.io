@@ -16,6 +16,10 @@
         <div class="left">
             <a href="/">Juan Gianella</a>
         </div>
+        <div class="center">
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
         <div class="right">
             <a href="https://github.com/Juanyabo" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i>
@@ -37,16 +41,6 @@
             <div class="text">
                 <h2>Hello, I'm Juan Gianella</h2>
                 <p>Systems Engineer specialized in Game Programming and UI Development. Graduated in 2024 as a Systems Engineer, I began my journey in software development with a Front-End internship in 2023, using Flutter and Dart to build a web app. In October 2024, I joined U-Tad University to specialize in Game Programming. Since then, I have worked for 8 months at Zulo Interactive, a student-led studio, contributing to Gameplay and UI systems for Lady Umbrella, a title set to release on Steam in October 2025. My focus is on creating intuitive and visually cohesive gameplay experiences through solid technical and UI design foundations.</p>
-                <div class="links">
-                    <a href="#skills">
-                        <i class="fa-solid fa-code"></i>
-                        <span>Skills</span>
-                    </a>
-                    <a href="#contact">
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Contact</span>
-                    </a>
-                </div>
             </div>
             <div class="headshot">
                 <img src="images/hero-headshot.webp" alt="Juan Gianella headshot">
@@ -111,5 +105,28 @@
             </div>
         </section>
     </main>
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav .center a");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120; // offset for navbar height
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+    </script>
 </body>
 </html>
