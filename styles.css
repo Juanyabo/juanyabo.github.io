@@ -384,6 +384,7 @@ nav .right a span {
 
     nav .right a {
         font-size: 12px;
+        margin: 0 5px;
     }
 }
 
@@ -393,16 +394,12 @@ nav .right a span {
         font-size: 10px;
     }
 
-    nav .center {
-        gap: 10px;
-    }
-
     nav .center a {
         font-size: 8px;
     }
 
     nav .right a {
         font-size: 10px;
-        margin: 0 5px;
+        margin: 0 3px;
     }
 }
