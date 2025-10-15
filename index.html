@@ -40,9 +40,9 @@
     </nav>
     <main>
         <!-- SECTION 1: Hero -->
-        <section class="hero-section">
+        <section id="aboutme" class="hero-section">
             <div class="text">
-                <h2>Hello, I'm Juan Gianella</h2>
+                <h2>About Me</h2>
                 <p>Systems Engineer specialized in Game Programming and UI Development. Graduated in 2024 as a Systems Engineer, I began my journey in software development with a Front-End internship in 2023, using Flutter and Dart to build a web app. In October 2024, I joined U-Tad University to specialize in Game Programming. Since then, I have worked for 8 months at Zulo Interactive, a student-led studio, contributing to Gameplay and UI systems for Lady Umbrella, a title set to release on Steam in October 2025. My focus is on creating intuitive and visually cohesive gameplay experiences through solid technical and UI design foundations.</p>
             </div>
             <div class="headshot">
@@ -112,16 +112,22 @@
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll("nav .center a");
 
-        window.addEventListener("scroll", () => {
-            let current = "";
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
 
+        function handleScroll() {
+            let current = "";
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
+                const sectionTop = section.offsetTop - 300;
                 const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                if ((scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) || (window.innerHeight + scrollY >= document.body.offsetHeight)){
                     current = section.getAttribute("id");
-                }   
+                }
             });
+
+            if (scrollY === 0 && sections.length > 0) {
+                current = sections[0].getAttribute("id");
+            }
 
             navLinks.forEach(link => {
                 link.classList.remove("active");
@@ -129,13 +135,37 @@
                     link.classList.add("active");
                 }
             });
-        });
+        }
+
         navLinks.forEach(link => {
-                link.addEventListener("click", () => {
-                    navLinks.forEach(l => l.classList.remove("active"));
-                    link.classList.add("active");
+            link.addEventListener("click", e => {
+                const targetId = link.getAttribute("href").substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (link.classList.contains("active")) {
+                    e.preventDefault();
+                    return;
+                }
+
+            navLinks.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
+
+            if (targetSection) {
+                e.preventDefault();
+
+                let offsetValue = -220;
+                if (targetId === "contact") {
+                    offsetValue = -80;
+                }
+
+                const offsetTop = targetSection.offsetTop + offsetValue;
+
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: "smooth"
                 });
-            });
+            }
+        });
+    });
     </script>
 </body>
 </html>

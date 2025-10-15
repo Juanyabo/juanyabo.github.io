@@ -26,10 +26,6 @@ a {
     text-decoration: none;
 }
 
-main {
-    padding-top: 100px;
-}
-
 /*NAVBAR*/
 
 nav {
@@ -128,11 +124,10 @@ nav .right a span {
 .hero-section {
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
-    margin: 50px 0;
+    margin: 50px 0px;
     align-items: center;
     gap: 40px;
-    margin-bottom: 100px;
+    margin-top: 220px;
 }
 
 .hero-section .text {
@@ -156,8 +151,7 @@ nav .right a span {
 
 /*SECTION 2: Skills*/
 .skills-section {
-    padding: 0 50px;
-    margin-bottom: 100px;
+    margin-top: 220px;
 }
 
 .skills-section h2 {
@@ -201,8 +195,8 @@ nav .right a span {
 
 /*SECTION 3: Contact*/
 .contact-section {
-    padding: 0 50px;
-    margin-bottom: 100px;
+    margin-top: 220px;
+    padding-bottom: 25px;
 }
 
 .contact-section h2 {
@@ -284,8 +278,23 @@ nav .right a span {
     }
 
     /*SECTION 1: Hero*/
+    .hero-section {
+        padding: 0 50px;
+    }
+
     .hero-section .text h2 {
         font-size: 35px;
+    }
+
+    /*SECTION 2: Skills*/
+    .skills-section {
+        padding: 0 50px;
+    }
+
+    /*SECTION 3: Contact*/
+    .contact-section {
+        padding: 0 50px;
+        padding-bottom: 25px;
     }
 }
 
@@ -300,7 +309,7 @@ nav .right a span {
     }
 
     nav .center {
-        gap: 10px;
+        gap: 15px;
     }
 
     nav .center a {
@@ -330,10 +339,6 @@ nav .right a span {
     /*NAVBAR*/
     nav .left a {
         font-size: 14px;
-    }
-
-    nav .center {
-        gap: 15px;
     }
 
     nav .center a {
