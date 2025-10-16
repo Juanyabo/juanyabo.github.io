@@ -150,7 +150,73 @@ nav .right a span {
     border-radius: 50%;
 }
 
-/*SECTION 2: Skills*/
+/*SECTION 2: Career path*/
+.careerpath-section {
+    min-height: 90vh;
+    box-sizing: border-box;
+}
+
+.careerpath-section h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 80px;
+}
+
+.careerpath-section .career-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.careerpath-section .career-grid::before {
+    content: "";
+    position: absolute;
+    top: 20px; 
+    bottom: 20px;
+    left: 50%; 
+    width: 2px; 
+    background-color: #ccc; 
+    transform: translateX(-50%); 
+}
+
+.career-column {
+    flex: 1 1 45%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.company-header img {
+    width: 70px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.company-header i {
+    font-size: 50px;
+    transition: color 0.2s;
+    margin-top: 15px;
+}
+
+.company-header i:hover {
+    filter: brightness(90%);
+}
+
+/*SECTION 3: Skills*/
 .skills-section {
     min-height: 90vh;
     box-sizing: border-box;
@@ -195,7 +261,7 @@ nav .right a span {
     font-size: 18px;
 }
 
-/*SECTION 3: Contact*/
+/*SECTION 5: Contact*/
 .contact-section {
     min-height: 90vh;
     box-sizing: border-box;
@@ -289,12 +355,49 @@ nav .right a span {
         font-size: 35px;
     }
 
-    /*SECTION 2: Skills*/
+    /*SECTION 2: Career path*/
+    .careerpath-section {
+        padding: 0 50px;
+    }
+
+    .careerpath-section h2 {
+    font-size: 35px;
+    }
+
+    .company-name{
+        font-size: 16px;
+    }
+
+    .company-header img {
+        width: 60px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .company-header i {
+        font-size: 40px;
+        transition: color 0.2s;
+        margin-top: 15px;
+    }
+
+    .location-info {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    /*SECTION 3: Skills*/
     .skills-section {
         padding: 0 50px;
     }
 
-    /*SECTION 3: Contact*/
+    /*SECTION 5: Contact*/
     .contact-section {
         padding: 0 50px;
         padding-bottom: 25px;
@@ -329,11 +432,47 @@ nav .right a span {
         padding-top: 50px;
     }
 
+    .hero-section .text h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     .hero-section .headshot img {
         width: 225px;
     }
 
-    /*SECTION 3: Contact*/
+    /*SECTION 2: Career path*/
+    .careerpath-section {
+        margin-top: 80px;
+    }
+
+    .careerpath-section h2 {
+        margin-bottom: 40px;
+    }
+
+    .careerpath-section .career-grid {
+        flex-direction: column;
+        padding-left: 60px;
+    }
+
+    .careerpath-section .career-grid::before {
+        width: 80%;
+        height: 2px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*SECTION 3: Skills*/
+    .skills-section {
+        margin-top: 80px;
+    }
+
+    /*SECTION 5: Contact*/
+    .contact-section h2 {
+        text-align: center;
+    }
+
     .contact-section .group {
         flex-direction: column;
     }
@@ -363,7 +502,17 @@ nav .right a span {
         font-size: 30px;
     }
 
-    /*SECTION 2: Skills*/
+    /*SECTION 2: Career path*/
+    .careerpath-section h2{
+        font-size: 30px;
+    }
+    
+    .careerpath-section .career-grid {
+        flex-direction: column;
+        padding-right: 60px;
+    }
+
+    /*SECTION 3: Skills*/
     .skills-section {
         padding: 0 20px;
     }
@@ -372,7 +521,7 @@ nav .right a span {
         font-size: 16px;
     }
 
-    /*SECTION 3: Contact*/
+    /*SECTION 5: Contact*/
     .contact-section {
         padding: 0 20px;
         padding-bottom: 25px;
@@ -396,6 +545,35 @@ nav .right a span {
     nav .right a {
         font-size: 12px;
         margin: 0 5px;
+    }
+
+    /*SECTION 2: Career path*/
+    .company-name{
+        font-size: 14px;
+    }
+
+    .company-header img {
+        width: 50px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .company-header i {
+        font-size: 30px;
+        transition: color 0.2s;
+        margin-top: 15px;
+    }
+
+    .location-info {
+        font-size: 12px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 12px;
     }
 }
 
