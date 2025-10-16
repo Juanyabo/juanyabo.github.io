@@ -224,41 +224,80 @@ nav .right a span {
 
 .skills-section h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 45px;
+    margin-bottom: 40px;
 }
 
-.skills-section .text {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.skills-section .cells {
+.skills-container {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.skills-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
     flex-wrap: wrap;
+    position: relative;
 }
 
-.skills-section .cells .cell {
+.skill-column {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.skill-column:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background-color: #ccc;
+}
+
+.skill-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+
+.skill-title::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px auto 0 auto;
+}
+
+.skill-item {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 200px;
-    padding: 10px 20px;
-    border: 1.5px solid #d3d3d3;
-    border-radius: 5px;
-    margin: 10px;
     gap: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+    white-space: nowrap;
 }
 
-.skills-section .cells .cell img {
-    width: 30px;
-    height: 30px;
+.skill-item img {
+    width: 35px;
+    height: 35px;
     object-fit: contain;
-    border-radius: 2px;
 }
 
-.skills-section .cells .cell span {
-    font-size: 18px;
+.skill-item span {
+    font-size: 16px;
+    color: var(--text-color);
 }
 
 /*SECTION 5: Contact*/
@@ -397,6 +436,48 @@ nav .right a span {
         padding: 0 50px;
     }
 
+    .skills-section h2 {
+        font-size: 35px;
+    }
+
+    .skills-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+    }
+
+    .skill-column {
+        flex: 1 1 calc(50% - 40px);
+        max-width: 45%;
+        position: relative;
+        text-align: center;
+    }
+
+    .skill-column:nth-child(odd)::after {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 10%;
+        height: 80%;
+        width: 2px;
+        background-color: #ccc;
+    }
+
+    .skill-column:nth-child(even)::after,
+    .skill-column:last-child::after {
+        display: none;
+    }
+
+    .skill-column:last-child {
+        flex: 1 1 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     /*SECTION 5: Contact*/
     .contact-section {
         padding: 0 50px;
@@ -504,7 +585,7 @@ nav .right a span {
 
     /*SECTION 2: Career path*/
     .careerpath-section h2{
-        font-size: 30px;
+        font-size: 35px;
     }
     
     .careerpath-section .career-grid {
@@ -513,12 +594,25 @@ nav .right a span {
     }
 
     /*SECTION 3: Skills*/
-    .skills-section {
-        padding: 0 20px;
+    .skills-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
 
-    .skills-section .cells .cell span {
-        font-size: 16px;
+    .skill-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+        position: relative;
+    }
+
+    /* Forcefully remove all pseudo-elements */
+    .skill-column::after,
+    .skill-column:nth-child(odd)::after,
+    .skill-column:nth-child(even)::after,
+    .skill-column:last-child::after {
+        content: none;
+        display: none;
     }
 
     /*SECTION 5: Contact*/
@@ -573,7 +667,7 @@ nav .right a span {
     }
 
     .description {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
@@ -590,5 +684,10 @@ nav .right a span {
     nav .right a {
         font-size: 10px;
         margin: 0 3px;
+    }
+
+    /*SECTION 3: Skills*/
+    .skill-title {
+        font-size: 16px;
     }
 }
