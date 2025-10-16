@@ -326,6 +326,7 @@ nav .right a span {
     /*SECTION 1: Hero*/
     .hero-section {
         flex-direction: column-reverse;
+        padding-top: 50px;
     }
 
     .hero-section .headshot img {
@@ -355,6 +356,7 @@ nav .right a span {
     /*SECTION 1: Hero*/
     .hero-section{
         padding: 0 20px;
+        padding-top: 75px;
     }
 
     .hero-section .text h2 {
@@ -373,6 +375,7 @@ nav .right a span {
     /*SECTION 3: Contact*/
     .contact-section {
         padding: 0 20px;
+        padding-bottom: 25px;
     }
 }
 
