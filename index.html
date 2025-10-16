@@ -118,7 +118,7 @@
         function handleScroll() {
             let current = "";
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 300;
+                const sectionTop = section.offsetTop - 280;
                 const sectionHeight = section.clientHeight;
                 if ((scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) || (window.innerHeight + scrollY >= document.body.offsetHeight)){
                     current = section.getAttribute("id");
@@ -152,9 +152,9 @@
             if (targetSection) {
                 e.preventDefault();
 
-                let offsetValue = -220;
+                let offsetValue = -120;
                 if (targetId === "contact") {
-                    offsetValue = -80;
+                    offsetValue = -68;
                 }
 
                 const offsetTop = targetSection.offsetTop + offsetValue;

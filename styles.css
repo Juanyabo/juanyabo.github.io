@@ -122,12 +122,13 @@ nav .right a span {
 
 /*SECTION 1: Hero*/
 .hero-section {
+    min-height: 90vh;
     display: flex;
     justify-content: space-between;
     margin: 50px 0px;
     align-items: center;
     gap: 40px;
-    margin-top: 220px;
+    box-sizing: border-box;
 }
 
 .hero-section .text {
@@ -151,7 +152,8 @@ nav .right a span {
 
 /*SECTION 2: Skills*/
 .skills-section {
-    margin-top: 220px;
+    min-height: 90vh;
+    box-sizing: border-box;
 }
 
 .skills-section h2 {
@@ -195,8 +197,9 @@ nav .right a span {
 
 /*SECTION 3: Contact*/
 .contact-section {
-    margin-top: 220px;
-    padding-bottom: 25px;
+    min-height: 90vh;
+    box-sizing: border-box;
+    padding-top: 50px;
 }
 
 .contact-section h2 {
