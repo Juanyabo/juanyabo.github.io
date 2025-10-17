@@ -7,12 +7,12 @@ const projects = [
     steam: "https://store.steampowered.com/app/3956890/Lady_Umbrella/"
   },
   {
-    image: "images/another-project.webp",
+    image: "images/talent-tree.webp",
     title: "Echo Runner",
-    description: "A fast-paced sci-fi platformer focused on speed and precision movement."
+    description: "Unreal Engine 5.4"
   },
   {
-    image: "images/third-project.webp",
+    gif: "images/unity-project.gif",
     title: "Mystic Fields",
     description: "An exploration puzzle game set in a magical countryside filled with secrets."
   }
@@ -29,36 +29,53 @@ const prevBtn = document.getElementById("prev-project");
 const nextBtn = document.getElementById("next-project");
 const imageCircle = document.getElementById("image-circle");
 const videoCircle = document.getElementById("video-circle");
+const gifEl = document.getElementById("project-gif");
 
 function updateProject(index) {
   pauseVideo();
-  const project = projects[index];
-  showingVideo = false;
 
-  imageEl.src = project.image;
+  if (typeof currentProjectIndex !== "undefined") {
+    projects[currentProjectIndex].showingVideo = showingVideo;
+  }
+
+  currentProjectIndex = index;
+  const project = projects[index];
+
+  // Reset all media visibility first
+  imageEl.style.display = "none";
+  videoEl.style.display = "none";
+  gifEl.style.display = "none";
+
+  imageEl.src = project.image || "";
   imageEl.alt = project.title + " preview";
   titleEl.textContent = project.title;
   descEl.textContent = project.description;
 
-  if (!project.video) {
-    videoEl.style.display = "none";
-    imageEl.style.display = "block";
-    document.querySelector(".media-controls").style.display = "none";
-  } else {
-    videoEl.src = project.video;
-    document.querySelector(".media-controls").style.display = "flex";
-    showImage();
-  }
-
   const steamLink = document.getElementById("project-steam");
-
   if (project.steam) {
     steamLink.href = project.steam;
     steamLink.style.display = "inline-block";
   } else {
     steamLink.style.display = "none";
   }
+
+  if (project.video) {
+    document.querySelector(".media-controls").style.display = "flex";
+    if (project.showingVideo) {
+      showVideo();
+    } else {
+      showImage();
+    }
+  } else if (project.gif) {
+    gifEl.src = project.gif;
+    gifEl.style.display = "block";
+    document.querySelector(".media-controls").style.display = "none";
+  } else if (project.image) {
+    imageEl.style.display = "block";
+    document.querySelector(".media-controls").style.display = "none";
+  }
 }
+
 
 function showImage() {
   pauseVideo();
