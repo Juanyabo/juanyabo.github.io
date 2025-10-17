@@ -183,6 +183,42 @@
                 </div>
             </div>
         </section>
+        <!-- SECTION 4: Portfolio -->
+        <section id="portfolio" class="portfolio-section">
+            <h2 class="portfolio-title">Portfolio</h2>
+            <div class="portfolio-container">
+                <div class="portfolio-image">
+                    <div class="media-wrapper">
+                        <img src="" alt="project preview" id="project-image">
+                        <iframe id="project-video" 
+                            src="https://www.youtube.com/embed/X_DgUlOjEhE?enablejsapi=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                        <div class="media-controls">
+                            <i id="image-circle" class="fa-solid fa-circle"></i>
+                            <i id="video-circle" class="fa-regular fa-circle"></i>
+                        </div>
+                    </div>
+                    <div class="portfolio-controls">
+                        <button id="prev-project" class="portfolio-btn">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button id="next-project" class="portfolio-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 id="project-title"></h3>
+                    <p id="project-description"></p>
+                    <a id="project-steam" href="#" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-steam"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
         <!-- SECTION 5: Contact -->
         <section id="contact" class="contact-section">
             <h2>Contact</h2>
@@ -205,64 +241,7 @@
             </div>
         </section>
     </main>
-    <script>
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll("nav .center a");
-
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-
-        function handleScroll() {
-            let current = "";
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 280;
-                const sectionHeight = section.clientHeight;
-                if ((scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) || (window.innerHeight + scrollY >= document.body.offsetHeight)){
-                    current = section.getAttribute("id");
-                }
-            });
-
-            if (scrollY === 0 && sections.length > 0) {
-                current = sections[0].getAttribute("id");
-            }
-
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${current}`) {
-                    link.classList.add("active");
-                }
-            });
-        }
-
-        navLinks.forEach(link => {
-            link.addEventListener("click", e => {
-                const targetId = link.getAttribute("href").substring(1);
-                const targetSection = document.getElementById(targetId);
-                if (link.classList.contains("active")) {
-                    e.preventDefault();
-                    return;
-                }
-
-            navLinks.forEach(l => l.classList.remove("active"));
-            link.classList.add("active");
-
-            if (targetSection) {
-                e.preventDefault();
-
-                let offsetValue = -120;
-                if (targetId === "contact") {
-                    offsetValue = -80;
-                }
-
-                const offsetTop = targetSection.offsetTop + offsetValue;
-
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-    </script>
+    <script src="scroll.js"></script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
