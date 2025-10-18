@@ -575,7 +575,13 @@ nav .right a span {
     }
 
     .description {
+        padding-left: 12px;
         font-size: 14px;
+    }
+
+    .bullet-icon {
+        font-size: 8px;
+        margin-top: 6px;
     }
 
     /*SECTION 3: Skills*/
@@ -628,10 +634,15 @@ nav .right a span {
     /*SECTION 4: Portfolio*/
     .portfolio-section {
         padding: 0 50px;
+        margin-bottom: 80px;
     }
 
     .portfolio-section h2 {
         font-size: 35px;
+    }
+
+    .media-controls {
+        font-size: 10px;
     }
 
     /*SECTION 5: Contact*/
@@ -639,6 +650,18 @@ nav .right a span {
         padding: 0 50px;
         padding-bottom: 25px;
     }
+
+    .contact-section h2 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 744px){
+    /*SECTION 1: Hero*/
+    .hero-section {
+        margin-top: 100px;
+    }
+
 }
 
 @media (max-width: 740px) {
@@ -738,7 +761,10 @@ nav .right a span {
     /*SECTION 1: Hero*/
     .hero-section{
         padding: 0 20px;
-        padding-top: 75px;
+    }
+
+    .hero-section .text{
+       font-size: 14px;
     }
 
     .hero-section .text h2 {
@@ -747,7 +773,7 @@ nav .right a span {
 
     /*SECTION 2: Career path*/
     .careerpath-section h2{
-        font-size: 35px;
+        font-size: 30px;
     }
     
     .careerpath-section .career-grid {
@@ -756,6 +782,10 @@ nav .right a span {
     }
 
     /*SECTION 3: Skills*/
+    .skills-section h2 {
+        font-size: 30px;
+    }
+
     .skills-columns {
         flex-direction: column;
         align-items: center;
@@ -768,7 +798,6 @@ nav .right a span {
         position: relative;
     }
 
-    /* Forcefully remove all pseudo-elements */
     .skill-column::after,
     .skill-column:nth-child(odd)::after,
     .skill-column:nth-child(even)::after,
@@ -777,10 +806,34 @@ nav .right a span {
         display: none;
     }
 
+    /*SECTION 4: Portfolio*/
+    .portfolio-section h2 {
+        font-size: 30px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 20px;
+    }
+
+    #project-video {
+        width: 480px;
+        height: 270px;
+    }
+
+    .portfolio-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
     /*SECTION 5: Contact*/
     .contact-section {
         padding: 0 20px;
         padding-bottom: 25px;
+    }
+
+    .contact-section h2 {
+        font-size: 30px;
     }
 }
 
@@ -830,6 +883,21 @@ nav .right a span {
 
     .description {
         font-size: 10px;
+    }
+
+    .bullet-icon {
+        font-size: 4px;
+        margin-top: 4px;
+    }
+
+    /*SECTION 4: Portfolio*/
+    .media-controls {
+        font-size: 8px;
+    }
+
+    #project-video {
+        width: 360px;
+        height: 203px;
     }
 }
 
