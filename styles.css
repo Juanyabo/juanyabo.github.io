@@ -656,7 +656,7 @@ nav .right a span {
     }
 }
 
-@media (max-width: 744px){
+@media (max-width: 800px){
     /*SECTION 1: Hero*/
     .hero-section {
         margin-top: 100px;
