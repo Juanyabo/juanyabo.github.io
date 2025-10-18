@@ -139,6 +139,10 @@ nav .right a span {
     font-size: 45px;
 }
 
+.location-info-aboutme {
+    margin-top: 10px;
+}
+
 .hero-section .headshot {
     flex: 2;
     display: flex;
@@ -210,6 +214,29 @@ nav .right a span {
     font-size: 50px;
     transition: color 0.2s;
     margin-top: 15px;
+}
+
+.date {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.description {
+    text-align: left;
+    color: var(--text-color);
+}
+
+.bullet {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.bullet-icon {
+    font-size: 10px;
+    margin-top: 8px;
+    color: var(--text-color);
 }
 
 .company-header i:hover {
@@ -296,7 +323,6 @@ nav .right a span {
 }
 
 .skill-item span {
-    font-size: 16px;
     color: var(--text-color);
 }
 
@@ -316,7 +342,7 @@ nav .right a span {
 
 .portfolio-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
   gap: 60px;
   flex-wrap: wrap;
@@ -386,20 +412,19 @@ nav .right a span {
 .portfolio-info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;;
-  align-items: center;
+  justify-content: flex-start;
   max-width: 500px;
 }
 
 .portfolio-info h3 {
-  font-size: 28px;
+  font-size: 25px;
   margin-bottom: 15px;
 }
 
 .portfolio-info p {
-  font-size: 18px;
   line-height: 1.5;
   color: #555;
+  color: var(--text-color);
 }
 
 #project-steam {
@@ -424,7 +449,7 @@ nav .right a span {
 }
 
 .contact-section h2 {
-    font-size: 35px;
+    font-size: 45px;
 }
 
 .contact-section .group {
@@ -446,12 +471,18 @@ nav .right a span {
 .contact-section .group form input,
 .contact-section .group form textarea {
     font-family: 'Poppins', sans-serif;
-    border: 2px solid var(--link-color);
+    border: 2px solid var(--text-color);
     background-color: transparent;
     padding: 10px;
     margin-bottom: 15px;
     outline: none;
     resize: none;
+    transition: border-color 0.2s;
+}
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+    border-color: var(--link-color);
 }
 
 .contact-section .group form button {

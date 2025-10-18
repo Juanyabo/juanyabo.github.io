@@ -2,19 +2,19 @@ const projects = [
   {
     image: "images/lady-umbrella-key-art.webp",
     title: "Lady Umbrella",
-    description: "A visually rich adventure game about courage and light in a dark, rainy world.",
+    description: "Lady Umbrella is a game developed by the student-based studio Zulo Interactive. Set in an Italian town currently under expansion, you play as special agent Francesca De Angelis, who, after being betrayed by her own agency while infiltrating the last remaining mafia gang, must take down both sides. Armed with a technological shotgun umbrella equipped with a shield and integrated gadgets, she fights to uncover the truth. I helped in the development of the game by working on UI systems and gameplay. More details can be found on my GitHub project Lady-Umbrella, and the Steam link to try out the game is available below.",
     video: "https://www.youtube.com/embed/X_DgUlOjEhE?enablejsapi=1",
     steam: "https://store.steampowered.com/app/3956890/Lady_Umbrella/"
   },
   {
     image: "images/talent-tree.webp",
-    title: "Echo Runner",
-    description: "Unreal Engine 5.4"
+    title: "Classic WoW Talent Tree UI Recreation",
+    description: "A project developed in Unreal Engine 5.4 where I challenged myself to recreate the classic World of Warcraft talent tree system. It implements the logic for tier unlocking and visually replicates the original interface using World of Warcraft assets found across various GitHub sources. More details can be found on my GitHub under the project TalentTree."
   },
   {
     gif: "images/unity-project.gif",
-    title: "Mystic Fields",
-    description: "An exploration puzzle game set in a magical countryside filled with secrets."
+    title: "Geolocated AR Experience",
+    description: "A project developed in Unity 6.1 using the Lightship SDK and 8th Wall. I was tasked with researching various frameworks and SDKs for a geolocated AR experience. The setup that worked best with the device provided to me was the Lightship SDK for Unity and 8th Wall for the web AR experience. Once the framework was selected, I evaluated how long it would take to scan a zone, generate its mesh, import it into a new scene, add physics or animations to objects, and deploy the project on iOS, Android, and web."
   }
 ];
 
